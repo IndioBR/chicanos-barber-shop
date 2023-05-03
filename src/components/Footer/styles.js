@@ -11,7 +11,8 @@ export const Container = styled.footer`
     padding: 1.5rem 2.5rem;
     font-size: 1.6rem;
     color: ${theme.colors.white};
-
+    position: relative;
+    bottom: 0;
     > .icons-container {
       display: flex;
       flex-direction: row;

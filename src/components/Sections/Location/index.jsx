@@ -5,7 +5,7 @@ import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 export const Location = ({ children }) => {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: "AIzaSyDusWSXLuTRQ_N96pPHCzS6BtRvlJrvT4U"
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY
   });
   const position = {
     lat: -20.5175722,

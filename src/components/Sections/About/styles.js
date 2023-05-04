@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme }) => css`
-    height: 70vh;
+    min-height: 70vh;
     width: 100%;
     text-align: center;
     display: flex;
@@ -13,6 +13,15 @@ export const Container = styled.div`
     font-size: 2.4rem;
     > p {
       max-width: 70%;
+    }
+
+    @media ${theme.sizes.ltMedium} {
+      min-height: 70vh;
+      gap: 5rem;
+      font-size: 1.4rem;
+      p {
+        max-width: 70%;
+      }
     }
   `}
 `;

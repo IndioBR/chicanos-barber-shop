@@ -5,7 +5,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: start;
-    height: 70rem;
+    min-height: 70rem;
     width: 100%;
     background-image: url("https://images.unsplash.com/photo-1635273051937-a0ddef9573b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNjI5NjF8MHwxfHNlYXJjaHwyMXx8YmFyYmVyJTIwc2hvcHxlbnwwfHx8fDE2ODI5NDE0NDM&ixlib=rb-4.0.3&q=80&w=1080");
     background-position: center center;
@@ -50,6 +50,31 @@ export const Container = styled.div`
         cursor: pointer;
         color: ${theme.colors.white};
         background-color: ${theme.colors.yellow};
+      }
+    }
+
+    @media ${theme.sizes.ltMedium} {
+      .main_container {
+        align-items: center;
+        height: 70rem;
+        width: 100%;
+        gap: 4rem;
+         h1, p {
+          text-align: center;
+          max-width: 100%;
+        }
+         h1 {
+          font-size: 2.4rem;
+        }
+
+         p {
+          font-size: 1.4rem;
+        }
+
+         .contact {
+          width: 8rem;
+          font-size: 1rem;
+        }
       }
     }
   `}

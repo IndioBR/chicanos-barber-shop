@@ -12,8 +12,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    height: 100vh;
-    max-height: 100vh;
+    min-height: 100vh;
     width: 100%;
   }
 

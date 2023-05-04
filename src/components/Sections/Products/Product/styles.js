@@ -3,20 +3,17 @@ import styled, { css } from 'styled-components';
 export const Container = styled.div`
   ${({ theme }) => css`
     text-align: center;
-    width: 40rem;
+    max-width: 40rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
-
     > .product_image {
-
       > img {
         object-fit: cover;
         height: 30rem;
         width: 40rem;
       }
     }
-
     > .product_description {
       display: flex;
       flex-direction: column;
@@ -44,6 +41,33 @@ export const Container = styled.div`
         cursor: pointer;
         color: ${theme.colors.white};
         background-color: ${theme.colors.yellow};
+      }
+    }
+    @media ${theme.sizes.ltMedium} {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      .product_image {
+        > img {
+          height: 15rem;
+          width: 20rem;
+        }
+      }
+      .product_description {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        h3 {
+          font-size: 1.8rem;
+        }
+        p {
+          font-size: 1.8rem;
+        }
+        .product_info {
+          width: 12rem;
+          padding: 1rem 1.5rem;
+          font-size: 1.2rem;
+        }
       }
     }
   `}

@@ -14,5 +14,11 @@ export const Container = styled.header`
     > img {
       max-width: 6.4rem;
     }
+
+    @media ${theme.sizes.ltMedium} {
+      & > img {
+        max-width: 4rem;
+      }
+    }
   `}
 `;

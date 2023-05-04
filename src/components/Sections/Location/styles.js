@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme }) => css`
-    height: 70vh;
+    min-height: 70vh;
     width: 100%;
     position: relative;
     > .address {
@@ -27,5 +27,33 @@ export const Container = styled.div`
         font-size: 2.8rem;
       }
     }
+
+    @media ${theme.sizes.medium} {
+      .address {
+        padding: 1rem 2rem;
+        width: 30%;
+        height: 20%;
+        h3 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    @media ${theme.sizes.ltMedium} {
+      .address {
+        padding: 1rem 2rem;
+        width: 30%;
+        height: 20%;
+        h3 {
+          font-size: 1.4rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
   `}
 `;
